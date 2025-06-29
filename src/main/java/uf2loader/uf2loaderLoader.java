@@ -276,7 +276,7 @@ public class uf2loaderLoader extends AbstractLibrarySupportLoader {
 		if (br == null) {
 			return;
 		}
-		br.setPointerIndex(idx);
+		long old = br.setPointerIndex(idx);
 		try {
 			m_magicStart0 = br.readNextUnsignedInt();
 			m_magicStart1 = br.readNextUnsignedInt();
